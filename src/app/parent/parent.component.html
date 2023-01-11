@@ -1,0 +1,10 @@
+<p>parent Component</p>
+
+<button (click)="toggleChild()">Toggle Child</button>
+
+<input type="text" [(ngModel)]="channelName">
+
+<app-child *ngIf="isChild" [channelName]="channelName">
+    <h2 #projectedContent>Please Project THis to Child Component</h2>
+    <!-- ngAfterContentInit Above -->
+</app-child>
